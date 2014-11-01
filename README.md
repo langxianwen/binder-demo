@@ -3,8 +3,7 @@ binder-demo
 
 c++ 层实现binder服务例子
 
-    研究了binder服务的实现，想写个binder例子。在网上和书上都看到有这类似的例子，照着写后，发现都不是自己想要的，不太符合源码的风格。
-就从源码的binder服务精简来一个。
+    研究了binder服务的实现，想写个binder例子。在网上和书上都看到有这类似的例子，照着写后，发现都不是自己想要的，不太符合源码的风格。就从源码的binder服务精简来一个。
     遇到的问题：
     1 、frameworks/native/include/binder/IInterface.h:50: error: undefined reference to 'android::RefBase::~RefBase()'
         原因：没有添加只添加了libbinder 库，没添加libutils库，
