@@ -1,46 +1,19 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: test jekyll
+---
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Binder-demo : c++ 层实现binder服务例子">
+<h2> {{page.title}}</h2>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<p> 文章 </p>
 
-    <title>Binder-demo</title>
-  </head>
+<ul>
+    {% for post in site.posts %}
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/langxianwen/binder-demo">View on GitHub</a>
-
-          <h1 id="project_title">Binder-demo</h1>
-          <h2 id="project_tagline">c++ 层实现binder服务例子</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/langxianwen/binder-demo/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/langxianwen/binder-demo/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+    <li> {{ post.date | date_to_string}} 
+        <a href="{{site.baseurl}}"> {{ post.title }} </a>
+    </li>
 
 
-  </body>
-</html>
+    {% endfor %}
+</ul>
